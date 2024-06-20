@@ -1,0 +1,46 @@
+
+- class: item item-camera
+  id: "camera"
+  src: ./static/videos/human_demo/place_mug.mp4
+  type: video/mp4
+  caption: "Mug-on-coaster"
+
+
+- class: item item-camera
+  id: "camera"
+  src: ./static/videos/human_demo/place_chip_bag.mp4
+  type: video/mp4
+  caption: "Chip-on-plate"
+
+- class: item item-canonical
+  id: "canonical"
+  src: ./static/videos/human_demo/simple_boat.mp4
+  type: video/mp4
+  caption: "Simple-boat-assembly"
+
+- class: item item-canonical
+  id: "canonical"
+  src: ./static/videos/human_demo/llama.mp4
+  type: video/mp4
+  caption: "Succulents-in-llama-vase"
+
+
+- class: item item-background
+  id: "background"
+  src: ./static/videos/human_demo/rearrange.mp4
+  type: video/mp4
+  caption: "Rearrange-mug-box"
+
+- class: item item-new
+  id: "new"
+  src: ./static/videos/human_demo/complex_boat.mp4
+  type: video/mp4
+  caption: "Complext-boat-assembly"
+
+
+
+- class: item item-new
+  id: "new"
+  src: ./static/videos/human_demo/breakfast.mp4
+  type: video/mp4
+  caption: "Prepare-breakfast"

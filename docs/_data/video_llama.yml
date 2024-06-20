@@ -1,0 +1,46 @@
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/y23f4e5gsqyj0ybu2j15rmh66tlu3e09.mp4
+  type: video/mp4
+  caption: ""
+
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/ra0rbehy66qan4wbmynccckx8ph7f0x2.mp4
+  type: video/mp4
+  caption: ""
+
+
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/mbnudhmasrip2y2j42fmm0r3zu0nsza0.mp4
+  type: video/mp4
+  caption: ""
+
+
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/w37gjs2h4c3bm32pn70d4a8jab4682bx.mp4
+  type: video/mp4
+  caption: ""
+
+
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/lgar3cdoaaax8m5icitn9jx05f0n1m5y.mp4
+  type: video/mp4
+  caption: ""
+
+
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/0vysdb06zl2junyvrnno25ado1ux3427.mp4
+  type: video/mp4
+  caption: ""
+
+
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/mr8p02sph4eknngp7ckksip34yvzz8vc.mp4
+  type: video/mp4
+  caption: ""

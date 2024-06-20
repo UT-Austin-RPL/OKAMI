@@ -1,0 +1,19 @@
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/ff29srbu79pb3rn6o88spcjxhhf6dyiy.mp4
+  type: video/mp4
+  caption: ""
+
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/ol4wwwmpsrjigc0wpij9rbgpbyfm2fo7.mp4
+  type: video/mp4
+  caption: ""
+
+- class: item item-camera
+  id: "camera"
+  src: https://utexas.box.com/shared/static/684wj4njs55wpg1e2y1lvuafa1wdd5m1.mp4
+  type: video/mp4
+  caption: ""
+
+

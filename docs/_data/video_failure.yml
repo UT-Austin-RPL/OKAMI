@@ -1,0 +1,31 @@
+- class: item item-camera
+  id: "camera"
+  src: ./static/videos/failure_videos/llama failure 1.mp4
+  type: video/mp4
+  caption: "Faile"
+
+- class: item item-camera
+  id: "camera"
+  src: ./static/videos/failure_videos/llama failure 2.mp4
+  type: video/mp4
+  caption: "Faile"
+
+- class: item item-camera
+  id: "camera"
+  src: ./static/videos/failure_videos/boat failure 2.mp4
+  type: video/mp4
+  caption: "Faile"
+
+
+- class: item item-camera
+  id: "camera"
+  src: ./static/videos/failure_videos/breakfast failure 1.mp4
+  type: video/mp4
+  caption: "Faile"
+
+
+- class: item item-camera
+  id: "camera"
+  src: ./static/videos/failure_videos/breakfast failure 2.mp4
+  type: video/mp4
+  caption: "Faile"
