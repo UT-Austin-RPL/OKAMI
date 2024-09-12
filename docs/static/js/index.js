@@ -217,6 +217,17 @@ $(document).ready(function() {
       adaptiveHeight: true,
       // centerMode: true,
     });
+    $('.robot-two-video-slick').slick({
+      dots: true,
+      infinite: true,
+      // speed: 300,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      // vertical:true,
+      arrows: true,
+      adaptiveHeight: true,
+      // centerMode: true,
+    });
     $('.robot-three-video-slick').slick({
       dots: true,
       infinite: true,

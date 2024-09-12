@@ -232,11 +232,12 @@
 
             <!-- TODO: replace with OKAMI video -->
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/hubAbximDuc?si=WqaTnnUJ-o4R-NM5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <!-- <video poster="" id="opening-video" autoplay controls muted loop playsinline height="100%">
-              <source src="static/videos/OKAMI_supp_video.mp4"
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/hubAbximDuc?si=WqaTnnUJ-o4R-NM5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+            
+            <video poster="" id="opening-video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/videos/main.mp4"
                       type="video/mp4">
-              </video>       -->
+              </video>      
         </div>
         <!-- <div class="subtitle">
           
@@ -461,9 +462,10 @@
 <section class="section">
   <div class="container is-max-desktop">
     <p class="carousel-title" id="toggleButton-human-video-demo">Visuomotor Policy Rollout</p>
+    <p class="content has-text-justified"> We can efficiently generate a large volume of successful rollout data using OKAMI, eliminating the need for human teleoperation, to train closed-loop visuomotor policies through behavioral cloning. We test on two tasks, 'Bagging' and 'Sprinkle-salt'. </p>
     <!-- Content to be toggled -->
     <div class="toggleContent" id="toggleContent-human-video-demo">
-      <div class="robot-three-video-slick">
+      <div class="robot-two-video-slick">
         {% for video in site.data.video_visuomotor %}
               <div class="{{ video.class }} is-centered">
                   <video class="human-video is-centered" poster="" id="{{ video.id }}" autoplay muted loop playsinline height="100%">
@@ -476,7 +478,6 @@
         {% endfor %}
       </div>
     </div>
-    <p class="content has-text-justified"> The OKAMI rollouts can be used for training a closed-loop visuomotor policy. </p>
   </div>
 </section>
 
