@@ -1,0 +1,23 @@
+- class: item item-camera
+  id: "camera"
+  src: .\static\videos\drawer\close_drawer_black_table.mp4
+  type: video/mp4
+  caption: ""
+
+- class: item item-camera
+  id: "camera"
+  src: .\static\videos\drawer\close_drawer_cabinet.mp4
+  type: video/mp4
+  caption: ""
+
+- class: item item-camera
+  id: "camera"
+  src: .\static\videos\drawer\close_drawer_green_tablecloth.mp4
+  type: video/mp4
+  caption: ""
+
+- class: item item-camera
+  id: "camera"
+  src: .\static\videos\drawer\close_drawer_shield.mp4
+  type: video/mp4
+  caption: ""

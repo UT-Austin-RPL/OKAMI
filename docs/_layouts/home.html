@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Vision-based Manipulation from Single Human
-        Video with Open-World Object Graphs">
-  <meta name="keywords" content="OKAMI, OOG, Open-World Object Graph">
+        content="OKAMI: Teaching Humanoid Robots Manipulation 
+        Skills through Single Video Imitation">
+  <meta name="keywords" content="OKAMI, Humanoid Manipulation, Imitation From Videos, Motion Retargeting">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation</title>
 
@@ -13,10 +13,10 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
 
-  <link rel="stylesheet" href="/OKAMI/static/css/bulma.min.css">
-  <!-- <link rel="stylesheet" href="/OKAMI/static/css/bulma-carousel.min.css"> -->
-  <!-- <link rel="stylesheet" href="/OKAMI/static/css/bulma-slider.min.css"> -->
-  <link rel="stylesheet" href="/OKAMI/static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="/static/css/bulma.min.css">
+  <!-- <link rel="stylesheet" href="/static/css/bulma-carousel.min.css"> -->
+  <!-- <link rel="stylesheet" href="/static/css/bulma-slider.min.css"> -->
+  <link rel="stylesheet" href="/static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="icon" href="">
@@ -27,9 +27,9 @@
   <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
-  <script defer src="/OKAMI/static/js/fontawesome.all.min.js"></script>
-  <!-- <script src="/OKAMI/static/js/bulma-carousel.min.js"></script> -->
-  <!-- <script src="/OKAMI/static/js/bulma-slider.min.js"></script> -->
+  <script defer src="/static/js/fontawesome.all.min.js"></script>
+  <!-- <script src="/static/js/bulma-carousel.min.js"></script> -->
+  <!-- <script src="/static/js/bulma-slider.min.js"></script> -->
   <!-- Add the slick-theme.css if you want default styling -->
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <!-- Add the slick-theme.css if you want default styling -->
@@ -37,9 +37,9 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js'></script> -->
 
-  <link rel="stylesheet" href="/OKAMI/static/css/index.css">
+  <link rel="stylesheet" href="/static/css/index.css">
 
-  <script src="/OKAMI/static/js/index.js"></script>
+  <script src="/static/js/index.js"></script>
 
 </head>
 <body>
@@ -131,6 +131,7 @@
   <div class="column has-text-centered">
     <div class="publication-links">
       <span class="link-block">
+        <!-- TODO: replace with pub link -->
         <a href="http://arxiv.org/abs/2405.20321"
            class="external-link button is-normal is-rounded">
           <span class="icon">
@@ -140,6 +141,7 @@
         </a>
       </span>
       <span class="link-block">
+        <!-- TODO: replace with youtube link -->
         <a href="https://youtu.be/hubAbximDuc"
            class="external-link button is-normal is-rounded">
           <span class="icon">
@@ -187,7 +189,7 @@
           <span>Coming Soon</span>
           </a>
       </span> -->
-      <span class="link-block">
+      <!-- <span class="link-block">
         <a href="https://zhuyifengzju.github.io/bibtex/okami.txt"
             class="external-link button is-normal is-rounded">
           <span class="icon">
@@ -195,7 +197,7 @@
           </span>
           <span>Bibtex</span>
           </a>
-      </span>
+      </span> -->
       <!-- Dataset Link.
       <span class="link-block">
         <a href="https://github.com/google/nerfies/releases/tag/0.1"
@@ -227,6 +229,9 @@
             <!-- <iframe src="" type="video/mp4"
               frameborder="0" allow="autoplay" allowfullscreen>
             </iframe> -->
+
+            <!-- TODO: replace with OKAMI video -->
+
             <iframe width="560" height="315" src="https://www.youtube.com/embed/hubAbximDuc?si=WqaTnnUJ-o4R-NM5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             <!-- <video poster="" id="opening-video" autoplay controls muted loop playsinline height="100%">
               <source src="static/videos/OKAMI_supp_video.mp4"
@@ -245,8 +250,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          We present an object-centric approach to empower robots to learn vision-based manipulation skills from human videos. We investigate the problem of imitating robot manipulation from a single human video in the <i>open-world</i> setting, where a robot must learn to manipulate novel objects from one video demonstration. We introduce OKAMI, an algorithm that tackles the problem by extracting an object-centric manipulation plan from a single RGB-D video and deriving a policy that conditions on the extracted plan. Our method enables the robot to learn from videos captured by daily mobile devices such as an iPhone and generalize the policies to deployment environments with varying visual backgrounds, camera angles, spatial layouts, and novel object instances. We systematically evaluate our method on both short-horizon and long-horizon tasks, demonstrating the efficacy of OKAMI in learning from a single human video in the open world.
-
+          We study the problem of teaching humanoid robots to imitate manipulation skills by watching single human videos. To tackle this problem, we investigate an object-aware retargeting approach, where humanoid robots mimic the human motions in the video while adapting to the object locations during deployment. We introduce OKAMI, an algorithm that generates a reference plan from a single RGB-D video, and derive a policy that follows the plan to complete the task. OKAMI sheds light on deploying humanoid robots in everyday environments, where the humanoid robot will quickly adapt to a new task given a single human video. Our experiments show that OKAMI outperforms the baseline by 58.33%, while showcasing systematic generalization across varying visual and spatial conditions.
         </div>
       </div>
     </div>
@@ -260,18 +264,13 @@
 
 <!-- / Carousel Video Example. -->
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-desktop">
-    <!-- Method Overview. -->
+    Method Overview.
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="subtitle is-3">Overview</h2>
-        <!-- <div class="hero-body"> -->
           <div>
-          <!-- <img id="teaser" src="./static/imgs/plan_generation.svg" alt="No image found."/> -->
-          <!-- <h2 class="subtitle">
-            OKAMI imitates manipulation from a single human video.
-          </h2> -->
           <video poster="" id="opening-video" autoplay controls muted loop playsinline height="100%">
             <source src="static/videos/method/overview.mp4"
                     type="video/mp4">
@@ -283,27 +282,25 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Method Overview. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="subtitle is-3">Method - Plan Generation from Video</h2>
+        <h2 class="title is-3">Method</h2>
         <!-- <div class="hero-body"> -->
           <div>
-          <img id="teaser" src="./static/imgs/plan_generation.svg" alt="No image found."/>
+          <img id="teaser" src="./static/imgs/method_overview.svg" alt="No image found."/>
           <!-- <h2 class="subtitle">
             OKAMI imitates manipulation from a single human video.
           </h2> -->
           <div class="content has-text-justified">
-            OKAMI first tracks the objects and keypoints across the video
-            frames. Then keyframes are identified based on the velocity
-            statistics of the keypoint trajectories. Then OKAMI generates an
-            Open-world Object Graph (OOG) for every keyframe, resulting in a
-            sequence of OOG that serves as the spatiotemporal abstraction of the
-            video. The figure is viewed best in color.
+            OKAMI is a two-staged method that enables a humanoid robot to imitate a manipulation task from a single human video. 
+            In the first stage, OKAMI generates a reference plan for subsequent manipulation, and the plan generation process uses GPT4V and multiple large vision models. 
+            In the second stage, OKAMI follows the reference plan, where it retargets human motions onto the humanoid with object awareness for each step of the plan. 
+            The retargeted motions are converted into robot joint configurations, and the humanoid robot follows the joint configurations to complete the demonstrated manipulation task.
         </div>
         </div>
       </div>
@@ -312,15 +309,12 @@
 
   <br>
   <br>
-  <div class="container is-max-desktop">
+  <!-- <div class="container is-max-desktop">
   <div class="columns is-centered has-text-centered">
   <div class="column is-four-fifths">
     <h4 class="subtitle is-3">Method - Action Synthesis of OKAMI Policy</h4>
     <div>
       <img id="teaser" src="./static/imgs/action_synthesis.svg" alt="No image found."/>
-      <!-- <h2 class="subtitle">
-        At test time, OKAMI synthesizes actions for the robot arm to execute.
-      </h2> -->
       <div class="content has-text-justified">
         At test time, OKAMI first localizes task-relevant objects and retrieves
         the matched OOG from the generated manipulation plan. Then OKAMI uses
@@ -336,7 +330,7 @@
 </div>
 </div>
 </div>
-</section>
+</section> -->
 
 <br><hr><br>
 <section class="section">
@@ -357,7 +351,7 @@
         {% endfor %}
       </div>
     </div>
-    <p class="content has-text-justified"> Here we show all the videos of human demonstrations. All the videos are taken using an iPad that is statically placed on the table. </p>
+    <p class="content has-text-justified"> Here we show all the videos of human demonstrations. All the videos are taken using the realsense camera mounted on the humanoid's head. </p>
   </div>
 </section>
 
@@ -367,11 +361,11 @@
   <div class="container is-max-desktop">
     <!-- Content to be toggled -->
     <h2 class="title is-3 sectiont-title">Real Robot Rollouts</h2>
-    <p class="content has-text-justified"> Here we provide rollout videos of OKAMI policies on real robots. All video playbacks are at 4x speed.</p>
+    <p class="content has-text-justified"> Here we provide rollout videos of OKAMI policies on real robots. </p>
     <div class="toggleContent" id="toggleContent-human-video-demo">
-      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Succulents-in-llama-vase</p>
+      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Bagging</p>
       <div class="robot-one-video-slick">
-        {% for video in site.data.video_llama %}
+        {% for video in site.data.video_bagging %}
               <div class="{{ video.class }} is-centered">
                   <video class="human-video is-centered" poster="" id="{{ video.id }}" autoplay muted loop playsinline height="100%">
                   <source src="{{ video.src }}"
@@ -384,9 +378,9 @@
       </div>
     </div>
     <div class="toggleContent" id="toggleContent-human-video-demo">
-      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Mug-on-coaster</p>
+      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Sprinkle-salt</p>
       <div class="robot-one-video-slick">
-        {% for video in site.data.video_mug %}
+        {% for video in site.data.video_salt %}
               <div class="{{ video.class }} is-centered">
                   <video class="human-video is-centered" poster="" id="{{ video.id }}" autoplay muted loop playsinline height="100%">
                   <source src="{{ video.src }}"
@@ -399,9 +393,9 @@
       </div>
     </div>
     <div class="toggleContent" id="toggleContent-human-video-demo">
-      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Complex-boat-assembly</p>
+      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Plush-toy-in-basket</p>
       <div class="robot-one-video-slick">
-        {% for video in site.data.video_long_boat %}
+        {% for video in site.data.video_plush %}
               <div class="{{ video.class }} is-centered">
                   <video class="human-video is-centered" poster="" id="{{ video.id }}" autoplay muted loop playsinline height="100%">
                   <source src="{{ video.src }}"
@@ -414,9 +408,9 @@
       </div>
     </div>
     <div class="toggleContent" id="toggleContent-human-video-demo">
-      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Prepare-breakfast</p>
+      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Place-snacks-on-plate</p>
       <div class="robot-one-video-slick">
-        {% for video in site.data.video_breakfast %}
+        {% for video in site.data.video_snack %}
               <div class="{{ video.class }} is-centered">
                   <video class="human-video is-centered" poster="" id="{{ video.id }}" autoplay muted loop playsinline height="100%">
                   <source src="{{ video.src }}"
@@ -428,6 +422,61 @@
         {% endfor %}
       </div>
     </div>
+    <div class="toggleContent" id="toggleContent-human-video-demo">
+      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Close-the-drawer</p>
+      <div class="robot-one-video-slick">
+        {% for video in site.data.video_drawer %}
+              <div class="{{ video.class }} is-centered">
+                  <video class="human-video is-centered" poster="" id="{{ video.id }}" autoplay muted loop playsinline height="100%">
+                  <source src="{{ video.src }}"
+                          type="{{ video.type }}">
+                  </video>   
+                  <div class="caption" style="font-size:20px!important"> <br> {{ video.caption }} </div>         
+                  <br>
+              </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="toggleContent" id="toggleContent-human-video-demo">
+      <p class="carousel-title" id="toggleButton-human-video-demo">Task: Close-the-laptop</p>
+      <div class="robot-one-video-slick">
+        {% for video in site.data.video_laptop %}
+              <div class="{{ video.class }} is-centered">
+                  <video class="human-video is-centered" poster="" id="{{ video.id }}" autoplay muted loop playsinline height="100%">
+                  <source src="{{ video.src }}"
+                          type="{{ video.type }}">
+                  </video>   
+                  <div class="caption" style="font-size:20px!important"> <br> {{ video.caption }} </div>         
+                  <br>
+              </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<br><hr><br>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <p class="carousel-title" id="toggleButton-human-video-demo">Visuomotor Policy Rollout</p>
+    <!-- Content to be toggled -->
+    <div class="toggleContent" id="toggleContent-human-video-demo">
+      <div class="robot-three-video-slick">
+        {% for video in site.data.video_visuomotor %}
+              <div class="{{ video.class }} is-centered">
+                  <video class="human-video is-centered" poster="" id="{{ video.id }}" autoplay muted loop playsinline height="100%">
+                  <source src="{{ video.src }}"
+                          type="{{ video.type }}">
+                  </video>   
+                  <!-- <div class="caption" style="font-size:20px!important"> Task name: {{ video.caption }} </div>          -->
+                  <br>
+              </div>
+        {% endfor %}
+      </div>
+    </div>
+    <p class="content has-text-justified"> The OKAMI rollouts can be used for training a closed-loop visuomotor policy. </p>
   </div>
 </section>
 
@@ -451,7 +500,7 @@
         {% endfor %}
       </div>
     </div>
-    <p class="content has-text-justified"> Typical failure modes of OKAMI policies are due to missed grasp, fail to complete the goal due to misalignment during insertion, or fail to place the object on the correct region in the plate.</p>
+    <p class="content has-text-justified"> OKAMI's policies may fail to grasp objects due to inaccuracies in controllers and the human reconstruction model, or fail to complete tasks because of unwanted collisions, undesired upper body rotations, or inaccuracy in solving inverse kinematics. </p>
   </div>
 </section>
 

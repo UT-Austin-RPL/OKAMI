@@ -1,46 +1,38 @@
 
 - class: item item-camera
   id: "camera"
-  src: ./static/videos/human_demo/place_mug.mp4
+  src: ./static/videos/human_demo/salt_human_demo.mp4
   type: video/mp4
-  caption: "Mug-on-coaster"
+  caption: "Sprinkle-salt"
 
 
 - class: item item-camera
   id: "camera"
-  src: ./static/videos/human_demo/place_chip_bag.mp4
+  src: ./static/videos/human_demo/plush_toy_human_demo.mp4
   type: video/mp4
-  caption: "Chip-on-plate"
+  caption: "Plush-toy-in-basket"
 
 - class: item item-canonical
   id: "canonical"
-  src: ./static/videos/human_demo/simple_boat.mp4
+  src: ./static/videos/human_demo/snack_human_demo.mp4
   type: video/mp4
-  caption: "Simple-boat-assembly"
+  caption: "Place-snacks-on-plate"
 
 - class: item item-canonical
   id: "canonical"
-  src: ./static/videos/human_demo/llama.mp4
+  src: ./static/videos/human_demo/close_laptop_human_demo.mp4
   type: video/mp4
-  caption: "Succulents-in-llama-vase"
+  caption: "Close-the-laptop"
 
 
 - class: item item-background
   id: "background"
-  src: ./static/videos/human_demo/rearrange.mp4
+  src: ./static/videos/human_demo/close_drawer_human_demo.mp4
   type: video/mp4
-  caption: "Rearrange-mug-box"
+  caption: "Close-the-drawer"
 
 - class: item item-new
   id: "new"
-  src: ./static/videos/human_demo/complex_boat.mp4
+  src: ./static/videos/human_demo/bagging_human_demo.mp4
   type: video/mp4
-  caption: "Complext-boat-assembly"
-
-
-
-- class: item item-new
-  id: "new"
-  src: ./static/videos/human_demo/breakfast.mp4
-  type: video/mp4
-  caption: "Prepare-breakfast"
+  caption: "Bagging"

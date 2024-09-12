@@ -1,0 +1,11 @@
+- class: item item-camera
+  id: "camera"
+  src: .\static\videos\visuomotor\bc_bagging.mp4
+  type: video/mp4
+  caption: "Faile"
+
+- class: item item-camera
+  id: "camera"
+  src: .\static\videos\visuomotor\bc_pouring.mp4
+  type: video/mp4
+  caption: "Faile"

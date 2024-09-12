@@ -1,0 +1,24 @@
+- class: item item-camera
+  id: "canonical"
+  src: ./static/videos/bagging/bagging_deploy4.mp4
+  type: video/mp4
+  caption: ""
+
+- class: item item-camera
+  id: "camera"
+  src: ./static/videos/bagging/deploy1.mp4
+  type: video/mp4
+  caption: ""
+
+- class: item item-camera
+  id: "canonical"
+  src: ./static/videos/bagging/deploy2.mp4
+  type: video/mp4
+  caption: ""
+
+- class: item item-camera
+  id: "canonical"
+  src: ./static/videos/bagging/deploy3.mp4
+  type: video/mp4
+  caption: ""
+
