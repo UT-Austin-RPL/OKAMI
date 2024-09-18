@@ -337,5 +337,23 @@ padding: 0 40px;
 }
 
 .has-text-red {
-  color: red;
+  color: #bf5700;
+}
+
+.s {
+  color: #d14
+}
+
+.na {
+  color: #008080
+}
+
+。nc {
+  color: #445588;
+  font-weight: bold
+}
+
+.nl {
+  color: #990000;
+  font-weight: bold
 }

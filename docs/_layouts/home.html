@@ -34,11 +34,34 @@
 
   <link rel="stylesheet" href="./static/css/index.css">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.3/gh-fork-ribbon.min.css" />
+
   <script src="./static/js/index.js"></script>
 
   <style>
     .has-text-red {
-      color: red;
+      color: #bf5700;
+    }
+    
+    .s {
+      color: #d14
+    }
+    
+    .na {
+      color: #008080
+    }
+    
+    .nc {
+      color: #445588;
+      font-weight: bold
+    }
+    
+    .nl {
+      color: #990000;
+      font-weight: bold
+    }
+    .bibref {
+      font-family: Consolas, "Liberation Mono";
     }
   </style>
 
@@ -367,7 +390,7 @@
     <div class="columns">
       <div class="column is-4">
         <div>
-          <video class="robot-video is-centered" poster="" id="bagging" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="bagging" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/human_demo/bagging_human_demo.mp4"
                     type="video/mp4">
             </video>   
@@ -376,7 +399,7 @@
       </div>
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="bagging" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="bagging" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/grid_videos/bagging_grid.mp4"
                     type="video/mp4">
             </video>   
@@ -389,7 +412,7 @@
     <div class="columns">
       <div class="column is-4">
         <div>
-          <video class="robot-video is-centered" poster="" id="salt" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="salt" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/human_demo/salt_human_demo.mp4"
                     type="video/mp4">
             </video>   
@@ -398,7 +421,7 @@
       </div>
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="salt" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="salt" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/grid_videos/salt_grid.mp4"
                     type="video/mp4">
             </video>   
@@ -411,7 +434,7 @@
     <div class="columns">
       <div class="column is-4">
         <div>
-          <video class="robot-video is-centered" poster="" id="plush_toy" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="plush_toy" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/human_demo/plush_toy_human_demo.mp4"
                     type="video/mp4">
             </video>   
@@ -420,7 +443,7 @@
       </div>
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="plush_toy" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="plush_toy" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/grid_videos/plush_toy_grid.mp4"
                     type="video/mp4">
             </video>   
@@ -433,7 +456,7 @@
     <div class="columns">
       <div class="column is-4">
         <div>
-          <video class="robot-video is-centered" poster="" id="snack" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="snack" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/human_demo/snack_human_demo.mp4"
                     type="video/mp4">
             </video>   
@@ -442,7 +465,7 @@
       </div>
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="snack" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="snack" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/grid_videos/snack_grid.mp4"
                     type="video/mp4">
             </video>   
@@ -455,7 +478,7 @@
     <div class="columns">
       <div class="column is-4">
         <div>
-          <video class="robot-video is-centered" poster="" id="drawer" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="drawer" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/human_demo/close_drawer_human_demo.mp4"
                     type="video/mp4">
             </video>   
@@ -464,7 +487,7 @@
       </div>
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="drawer" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="drawer" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/grid_videos/drawer_grid.mp4"
                     type="video/mp4">
             </video>   
@@ -477,7 +500,7 @@
     <div class="columns">
       <div class="column is-4">
         <div>
-          <video class="robot-video is-centered" poster="" id="laptop" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="laptop" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/human_demo/close_laptop_human_demo.mp4"
                     type="video/mp4">
             </video>   
@@ -486,7 +509,7 @@
       </div>
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="laptop" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="laptop" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/grid_videos/laptop_grid.mp4"
                     type="video/mp4">
             </video>   
@@ -503,7 +526,7 @@
 <section class="section">
   <div class="container is-max-desktop">
     <!-- <p class="carousel-title" id="toggleButton-human-video-demo">Visuomotor Policy Rollout</p> -->
-    <h2 class="title is-3 is-centered">Visuomotor Policy Rollout</h2>
+    <h2 class="title is-3 is-centered">Closed-Loop Visuomotor Policies</h2>
     <p class="content has-text-justified"> By randomly initializing the object layouts and running the object-aware retargeting pipeline each time, we can efficiently generate a large volume of successful rollout data using OKAMI without the need for human-teleoperation. The rollout data can then be used to train closed-loop visuomotor policies through behavioral cloning. 
      We test on two tasks, bagging and sprinkle-salt. The success rates of the visuomotor policies achieve 83.3% and 75% respectively. Here we provide the rollouts of visuomotor policies. </p>
 
@@ -511,7 +534,7 @@
       <div class="column">
         <!-- <h2 class="subtitle is-4 is-centered">Task: Bagging</h2> -->
         <div>
-          <video class="robot-video is-centered" poster="" id="bagging" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="bagging" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/visuomotor/bc_bagging.mp4"
                     type="video/mp4">
             </video>   
@@ -522,7 +545,7 @@
       <div class="column">
         <!-- <h2 class="subtitle is-4 is-centered">Task: Sprinkle-salt</h2> -->
         <div>
-          <video class="robot-video is-centered" poster="" id="pouring" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="pouring" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/visuomotor/bc_pouring.mp4"
                     type="video/mp4">
             </video>   
@@ -541,10 +564,10 @@
     <h2 class="title is-3 is-centered">Failure Examples</h2>
     <p class="content has-text-justified"> OKAMI's policies may fail to grasp objects due to inaccuracies in the robot controllers, the human reconstruction model or the vision models, or fail to complete tasks because of unwanted collisions, undesired upper body rotations, or inaccuracy in solving inverse kinematics. Here we provide typical failure examples. </p>
 
-    <div class="columns is-max-desktop">
+    <div class="columns is-max-desktop is-multiline">
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="fail1" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="fail1" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/failure_videos/fail_to_grasp_bagging.mp4"
                     type="video/mp4">
             </video>   
@@ -554,7 +577,7 @@
       
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="fail2" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="fail2" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/failure_videos/fail_to_grasp.mp4"
                     type="video/mp4">
             </video>   
@@ -566,7 +589,7 @@
     <div class="columns is-max-desktop">
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="fail3" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="fail3" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/failure_videos/fail_to_complete1.mp4"
                     type="video/mp4">
             </video>   
@@ -576,7 +599,7 @@
       
       <div class="column">
         <div>
-          <video class="robot-video is-centered" poster="" id="fail4" controls muted playsinline height="100%">
+          <video class="robot-video is-centered" poster="" id="fail4" controls muted autoplay loop playsinline height="100%">
             <source src="./static/videos/failure_videos/fail_to_complete2.mp4"
                     type="video/mp4">
             </video>   
@@ -594,86 +617,127 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3 is-centered">Team</h2>
 
-    <div class="columns is-max-desktop">
-      <div class="column">
-        <a href="" align="middle">
-          <figure class="image is-128x128">
+    <div class="columns is-max-desktop has-text-centered is-multiline">
+      <div class="column is-2 is-offset-1">
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
             <img class="is-rounded" src="./static/imgs/authors/jinhan.jpg">
           </figure>
-          <div class="mb-2"></div>
-          <p>Jinhan Li</p>
-        </a>
+        </div>
+
+        <div class="content has-text-centered">
+          <a href="">
+            Jinhan Li
+          </a>
+        </div>
       </div>
 
-      <div class="column">
-        <a href="https://zhuyifengzju.github.io/" align="middle">
-          <figure class="image is-128x128">
+      <div class="column is-2">
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
             <img class="is-rounded" src="./static/imgs/authors/yifeng.jpg">
           </figure>
-          <div class="mb-2"></div>
-          <p>Yifeng Zhu*</p>
-        </a>
+        </div>
+
+        <div class="content has-text-centered">
+          <a href="https://zhuyifengzju.github.io/">
+            Yifeng Zhu*
+          </a>
+        </div>
       </div>
 
-      <div class="column">
-        <a href="https://xieleo5.github.io/" align="middle">
-          <figure class="image is-128x128">
+      <div class="column is-2">
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
             <img class="is-rounded" src="./static/imgs/authors/yuqi_xie.png">
           </figure>
-          <div class="mb-2"></div>
-          <p>Yuqi Xie*</p>
-        </a>
+        </div>
+
+        <div class="content has-text-centered">
+          <a href="https://xieleo5.github.io/">
+            Yuqi Xie*
+          </a>
+        </div>
+
       </div>
 
-      <div class="column">
-        <a href="https://zhenyujiang.me/" align="middle">
-          <figure class="image is-128x128">
+      <div class="column is-2">
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
             <img class="is-rounded" src="./static/imgs/authors/zhenyu_jiang.jpg">
           </figure>
-          <div class="mb-2"></div>
-          <p>Zhenyu Jiang*</p>
-        </a>
+        </div>
+
+        <div class="content has-text-centered">
+          <a href="https://zhenyujiang.me/">
+            Zhenyu Jiang*
+          </a>
+        </div>
+
       </div>
 
-      <div class="column">
-        <a href="https://mingyoseo.com/" align="middle">
-          <figure class="image is-128x128">
+      <div class="column is-2">
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
             <img class="is-rounded" src="./static/imgs/authors/mingyo_seo.png">
           </figure>
-          <div class="mb-2"></div>
-          <p>Mingyo Seo</p>
-        </a>
-      </div>
+        </div>
 
-      <div class="column">
-        <a href="https://geopavlakos.github.io/" align="middle">
-          <figure class="image is-128x128">
+        <div class="content has-text-centered">
+          <a href="https://mingyoseo.com/">
+            Mingyo Seo
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="columns is-max-desktop has-text-centered is-multiline">
+      <div class="column is-2 is-offset-4">
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
             <img class="is-rounded" src="./static/imgs/authors/georgios_pavlakos.jpg">
           </figure>
-          <div class="mb-2"></div>
-          <p>Georgios Pavlakos</p>
-        </a>
+        </div>
+
+        <div class="content has-text-centered">
+          <a href="https://geopavlakos.github.io/">
+            <!-- <div class="mb-2"></div> -->
+            Georgios Pavlakos
+          </a>
+        </div>
+
       </div>
 
-      <div class="column">
-        <a href="https://yukezhu.me/" align="middle">
-          <figure class="image is-128x128">
+      <div class="column is-2">
+
+        <div class="card-image has-text-centered">
+          <figure class="image is-128x128 is-inline-block">
             <img class="is-rounded" src="./static/imgs/authors/yuke_zhu.jpg">
           </figure>
-          <div class="mb-2"></div>
-          <p>Yuke Zhu</p>
-        </a>
+        </div>
+
+        <div class="content has-text-centered">
+          <a href="https://yukezhu.me/">
+            Yuke Zhu
+          </a>
+        </div>
       </div>
 
     </div>
 
     <h2 class="title is-3 is-centered">Citation</h2>
-    <pre class="code-block"><code>@inproceedings{okami2024,
-    title={OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation},
-    author={Jinhan Li and Yifeng Zhu and Xuqi Xie and Zhenyu Jiang and Mingyo Seo and Georgios Pavlakos and Yuke Zhu},
-    booktitle={Conference on Robot Learning (CoRL)},
-    year={2024}
-}</code></pre>
+    <pre><code class="bibref"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">okami2024</span><span class="p">,</span>
+    <span class="na">title</span><span class="p">=</span><span class="s">{OKAMI: Teaching Humanoid Robots Manipulation Skills through Single Video Imitation}</span><span class="p">,</span>
+    <span class="na">author</span><span class="p">=</span><span class="s">{Jinhan Li and Yifeng Zhu and Xuqi Xie and Zhenyu Jiang and Mingyo Seo and Georgios Pavlakos and Yuke Zhu}</span><span class="p">,</span>
+    <span class="na">booktitle</span><span class="p">=</span><span class="s">{8th Annual Conference on Robot Learning (CoRL)}</span><span class="p">,</span>
+    <span class="na">year</span><span class="p">=</span><span class="s">{2024}</span>
+<span class="p">}</span></code></pre>
   </div>
 </section>
 
@@ -686,7 +750,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Acknowledgement</h2>
           <div class="content has-text-justified">
-            We would like to thank William Yue for providing the initial implementation of the behavior cloning policies, Peter Stone for his valuable support with task design and demo shooting, and Yuzhe Qin for sharing the dex-retargeting codebase.
+            We would like to thank William Yue for providing the initial implementation of the behavior cloning policies, Peter Stone for his valuable support with task design and demo shooting, Yuzhe Qin for sharing the dex-retargeting codebase, and Zhenjia Xu for his help in developing the the humanoid's infrastructure.
             This work has taken place in the Robot Perception and Learning Group (RPL) at UT Austin. RPL research has been partially supported by the National Science Foundation (FRR2145283, EFRI-2318065) and the Office of Naval Research (N00014-22-1-2204).
           </div>
         </div>
