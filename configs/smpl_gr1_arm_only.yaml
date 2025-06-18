@@ -1,0 +1,97 @@
+GR1_body:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/urdf/gr1_dex.urdf
+  fixed_joints: ["joint_waist_yaw", "joint_waist_pitch", "joint_waist_roll"]
+
+  pre_processor:
+    _target_: retarget.pre_processer.smpl_gr1.SMPLGR1Preprocessor
+
+  solver:
+    _target_: retarget.ik_solver.IKSolver
+    dt: 0.01
+    num_step_per_frame: 10
+    # tasks and costs
+    posture_cost: 0.1
+    link_costs:
+      # link_LArm2:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm2:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      link_LArm7:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_RArm7:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_LArm4:
+        orientation_cost: 0.0
+        position_cost: 0.5
+      link_RArm4:
+        orientation_cost: 0.0
+        position_cost: 0.5
+      # link_LArm14:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm14:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_LArm15:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm15:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_LArm17:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm17:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_LArm18:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm18:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_LArm23:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm23:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_LArm24:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm24:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_LArm20:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm20:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_LArm21:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm21:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_LArm11:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm11:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_LArm12:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5
+      # link_RArm12:
+      #   orientation_cost: 0.0
+      #   position_cost: 0.5

@@ -1,0 +1,34 @@
+GR1_left_hand:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/handleft01151/urdf/handleft01151_renamed.urdf
+
+  pre_processor:
+    _target_: retarget.pre_processer.smpl_gr1.SMPLGR1Preprocessor
+
+  solver:
+    _target_: retarget.ik_solver.IKSolver
+    dt: 0.01
+    num_step_per_frame: 20
+    amplify_factor: 50.0
+    # tasks and costs
+    posture_cost: 0.0
+    link_costs:
+      link_LArm10:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_LArm14:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_LArm17:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_LArm20:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_LArm23:
+        orientation_cost: 0.0
+        position_cost: 1.0

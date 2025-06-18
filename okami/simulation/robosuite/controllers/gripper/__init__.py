@@ -1,2 +1,0 @@
-from .simple_grip import SimpleGripController
-from .joint_position_controller import GripperJointPositionController

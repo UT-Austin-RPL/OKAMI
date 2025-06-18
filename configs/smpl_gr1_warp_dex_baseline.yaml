@@ -1,0 +1,228 @@
+GR1_body:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/urdf/gr1_dex.urdf
+  fixed_joints: ["joint_waist_yaw", "joint_waist_pitch", "joint_waist_roll"]
+  # fixed_joints: []
+  # fix fingers inside body
+  fingers:
+    [
+      "joint_LFinger0",
+      "joint_LFinger1",
+      "joint_LFinger2",
+      "joint_LFinger3",
+      "joint_LFinger5",
+      "joint_LFinger6",
+      "joint_LFinger8",
+      "joint_LFinger9",
+      "joint_LFinger11",
+      "joint_LFinger12",
+      "joint_LFinger14",
+      "joint_LFinger15",
+      "joint_RFinger0",
+      "joint_RFinger1",
+      "joint_RFinger2",
+      "joint_RFinger3",
+      "joint_RFinger5",
+      "joint_RFinger6",
+      "joint_RFinger8",
+      "joint_RFinger9",
+      "joint_RFinger11",
+      "joint_RFinger12",
+      "joint_RFinger14",
+      "joint_RFinger15",
+    ]
+
+  pre_processor:
+    _target_: retarget.pre_processer.dummy_gr1.DummyGR1Preprocessor
+
+  solver:
+    _target_: retarget.solver.IKSolver
+    dt: 0.01
+    num_step_per_frame: 3
+    # tasks and costs
+    posture_cost: 0.02
+    link_costs:
+      link_LArm2:
+        orientation_cost: 0.0
+        position_cost: 0.
+      link_RArm2:
+        orientation_cost: 0.0
+        position_cost: 0.
+      link_LArm7:
+        orientation_cost: 0.
+        position_cost: .0
+      link_LPalm:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_RPalm:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_RArm7:
+        orientation_cost: 0.
+        position_cost: .0
+      link_LArm4:
+        orientation_cost: 0.0
+        position_cost: 0.
+      link_RArm4:
+        orientation_cost: 0.0
+        position_cost: 0.
+
+  adjuster:
+    _target_: retarget.solver.IKSolver
+    dt: 0.01
+    num_step_per_frame: 10
+    # tasks and costs
+    posture_cost: 0.1
+    link_costs:
+      link_LArm7:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_RArm7:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_LArm12:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_LArm15:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_LArm18:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_LArm21:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_LArm24:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_RArm12:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_RArm15:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_RArm18:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_RArm21:
+        orientation_cost: 0.0
+        position_cost: 0.0
+      link_RArm24:
+        orientation_cost: 0.0
+        position_cost: 0.0
+
+  post_filters:
+    - joint_position_filter:
+      _target_: retarget.filter.JointPositionFilter
+      history_size: 10
+      smoothing_strength: 0.02
+      outlier_threshold: 0.8
+      speed_limit: 0.5
+      verbose: False
+      joint_mask_names:
+        - joint_LFinger0
+        - joint_LFinger1
+        - joint_LFinger2
+        - joint_LFinger3
+        - joint_LFinger11
+        - joint_LFinger12
+        - joint_LFinger14
+        - joint_LFinger15
+        - joint_LFinger5
+        - joint_LFinger6
+        - joint_LFinger8
+        - joint_LFinger9
+        - joint_RFinger0
+        - joint_RFinger1
+        - joint_RFinger2
+        - joint_RFinger3
+        - joint_RFinger11
+        - joint_RFinger12
+        - joint_RFinger14
+        - joint_RFinger15
+        - joint_RFinger5
+        - joint_RFinger6
+        - joint_RFinger8
+        - joint_RFinger9
+
+GR1_left_hand:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/handleft01151/urdf/handleft01151_renamed.urdf
+
+  pre_processor:
+    _target_: retarget.pre_processer.smpl_gr1.SMPLGR1HandDexRetargetPreProcessor
+    side: left
+
+  solver:
+    _target_: retarget.solver.DexRetargetSolver
+    side: left
+    default_urdf_dir: assets
+    # for dex-retarget solver
+    retargeting:
+      type: vector
+      urdf_path: inspire_hand/inspire_hand_left.urdf
+
+      # Target refers to the retargeting target, which is the robot hand
+      target_joint_names: [ 'pinky_proximal_joint', 'ring_proximal_joint', 'middle_proximal_joint', 'index_proximal_joint',
+                            'thumb_proximal_pitch_joint', 'thumb_proximal_yaw_joint' ]
+      target_origin_link_names: [ "base", "base", "base", "base", "base", "thumb_tip", "thumb_tip"]
+      target_task_link_names: [ "thumb_tip",  "index_tip", "middle_tip", "ring_tip", "pinky_tip", "index_tip", "middle_tip"]
+      scaling_factor: 1.2
+
+      # Source refers to the retargeting input, which usually corresponds to the human hand
+      # The joint indices of human hand joint which corresponds to each link in the target_link_names
+      target_link_human_indices: [ [ -1, -1, -1, -1, -1, 14, 14 ], [ 14, 2, 5, 11, 8, 2, 5 ] ]
+
+      # A smaller alpha means stronger filtering, i.e. more smooth but also larger latency
+      low_pass_alpha: 0.2
+
+  post_filters:
+    - angle_discretizer:
+      _target_: retarget.filter.GR1DexRetargetFilter
+
+GR1_right_hand:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/handright01091/urdf/handright01091_renamed.urdf
+
+  pre_processor:
+    _target_: retarget.pre_processer.smpl_gr1.SMPLGR1HandDexRetargetPreProcessor
+    side: right
+
+  solver:
+    _target_: retarget.solver.DexRetargetSolver
+    side: right
+    default_urdf_dir: assets/
+    # for dex-retarget solver
+    retargeting:
+      type: vector
+      urdf_path: inspire_hand/inspire_hand_right.urdf
+
+      # Target refers to the retargeting target, which is the robot hand
+      target_joint_names: [ 'pinky_proximal_joint', 'ring_proximal_joint', 'middle_proximal_joint', 'index_proximal_joint',
+                            'thumb_proximal_pitch_joint', 'thumb_proximal_yaw_joint' ]
+      target_origin_link_names: [ "base", "base", "base", "base", "base", "thumb_tip", "thumb_tip"]
+      target_task_link_names: [ "thumb_tip",  "index_tip", "middle_tip", "ring_tip", "pinky_tip", "index_tip", "middle_tip"]
+      scaling_factor: 1.8
+
+      # Source refers to the retargeting input, which usually corresponds to the human hand
+      # The joint indices of human hand joint which corresponds to each link in the target_link_names
+      target_link_human_indices: [ [ -1, -1, -1, -1, -1, 14, 14 ], [ 14, 2, 5, 11, 8, 2, 5 ] ]
+
+      # A smaller alpha means stronger filtering, i.e. more smooth but also larger latency
+      low_pass_alpha: 0.2
+
+  post_filters:
+    - angle_discretizer:
+      _target_: retarget.filter.GR1DexRetargetFilter

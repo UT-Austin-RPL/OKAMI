@@ -1,0 +1,55 @@
+GR1_left_hand:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/handleft01151/urdf/handleft01151_renamed.urdf
+
+  pre_processor:
+    _target_: retarget.pre_processer.avp_gr1.AVPGR1HandAnglePreProcessor
+    side: left
+
+  solver:
+    _target_: retarget.angle_solver.AVPAngleSolver
+    x_plane_idx: [0, 5, 6, 10, 11, 15, 16, 20, 21]
+    z_plane_idx: [[5, 6], [10, 11], [15, 16], [20, 21]]
+    thumb_idx: [1, 4]
+
+  post_filters:
+    - joint_position_filter:
+      _target_: retarget.filter.post_filter.JointPositionFilter
+      history_size: 10
+      smoothing_strength: 0.2
+      outlier_threshold: 0.8
+      speed_limit: 0.2
+      joint_size: 12
+      verbose: False
+
+GR1_right_hand:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/handright01091/urdf/handright01091_renamed.urdf
+
+  pre_processor:
+    _target_: retarget.pre_processer.avp_gr1.AVPGR1HandAnglePreProcessor
+    side: right
+
+  solver:
+    _target_: retarget.angle_solver.AVPAngleSolver
+    x_plane_idx: [0, 5, 6, 10, 11, 15, 16, 20, 21]
+    z_plane_idx: [[5, 6], [10, 11], [15, 16], [20, 21]]
+    thumb_idx: [1, 4]
+
+  post_filters:
+    - joint_position_filter:
+      _target_: retarget.filter.post_filter.JointPositionFilter
+      history_size: 10
+      smoothing_strength: 0.2
+      outlier_threshold: 0.8
+      speed_limit: 0.2
+      joint_size: 12
+      verbose: False

@@ -1,0 +1,164 @@
+Joints:
+  - joint_name: waist_yaw
+    joint_limits: [-1.05 1.05]
+    parent_link: base
+    child_link: waist_yaw
+
+  - joint_name: waist_pitch
+    joint_limits: [-0.52 1.22]
+    parent_link: waist_yaw
+    child_link: waist_pitch
+
+  - joint_name: waist_roll
+    joint_limits: [-0.7 0.7]
+    parent_link: waist_pitch
+    child_link: waist_roll
+
+  - joint_name: head_yaw
+    joint_limits: [-2.71 2.71]
+    parent_link: waist_roll
+    child_link: head_yaw
+
+  - joint_name: head_roll
+    joint_limits: [-0.35 0.35]
+    parent_link: head_yaw
+    child_link: head_roll
+
+  - joint_name: head_pitch
+    joint_limits: [-0.52 0.35]
+    parent_link: head_roll
+    child_link: head_pitch
+
+  # Left arm:
+  - joint_name: l_shoulder_pitch
+    joint_limits: [-2.79 1.92]
+    parent_link: waist_roll
+    child_link: l_upper_arm_pitch
+
+  - joint_name: l_shoulder_roll
+    joint_limits: [-0.57, 3.27]
+    parent_link: l_upper_arm_pitch
+    child_link: l_upper_arm_roll
+
+  - joint_name: l_shoulder_yaw
+    joint_limits: [-2.97 2.97]
+    parent_link: l_upper_arm_roll
+    child_link: l_upper_arm_yaw
+
+  - joint_name: l_elbow_pitch
+    joint_limits: [-2.27, 2.27]
+    parent_link: l_upper_arm_yaw
+    child_link: l_lower_arm_pitch
+
+  - joint_name: l_wrist_yaw
+    joint_limits: [-2.97, 2.97]
+    parent_link: l_lower_arm_pitch
+    child_link: l_hand_yaw
+
+  - joint_name: l_wrist_roll
+    joint_limits: [-0.61, 0.61]
+    parent_link: l_hand_yaw
+    child_link: l_hand_roll
+
+  - joint_name: l_wrist_pitch
+    joint_limits: [-0.61, 0.61]
+    parent_link: l_hand_roll
+    child_link: l_hand_pitch
+
+  # right arm:
+  - joint_name: r_shoulder_pitch
+    joint_limits: [-2.79 1.92]
+    parent_link: waist_roll
+    child_link: r_upper_arm_pitch
+
+  - joint_name: r_shoulder_roll
+    joint_limits: [-0.57, 3.27]
+    parent_link: r_upper_arm_pitch
+    child_link: r_upper_arm_roll
+
+  - joint_name: r_shoulder_yaw
+    joint_limits: [-2.97 2.97]
+    parent_link: r_upper_arm_roll
+    child_link: r_upper_arm_yaw
+
+  - joint_name: r_elbow_pitch
+    joint_limits: [-2.27, 2.27]
+    parent_link: r_upper_arm_yaw
+    child_link: r_lower_arm_pitch
+
+  - joint_name: r_wrist_yaw
+    joint_limits: [-2.97, 2.97]
+    parent_link: r_lower_arm_pitch
+    child_link: r_hand_yaw
+
+  - joint_name: r_wrist_roll
+    joint_limits: [-0.61, 0.61]
+    parent_link: r_hand_yaw
+    child_link: r_hand_roll
+
+  - joint_name: r_wrist_pitch
+    joint_limits: [-0.61, 0.61]
+    parent_link: r_hand_roll
+    child_link: r_hand_pitch
+
+  # Left leg:
+  - joint_name: l_hip_roll
+    parent_link: base
+    child_link: l_thigh_roll
+    joint_limits: [-0.09, 0.79]
+
+  - joint_name: l_hip_yaw
+    parent_link: l_thigh_roll
+    child_link: l_thigh_yaw
+    joint_limits: [-0.7, 0.7]
+
+  - joint_name: l_hip_pitch
+    parent_link: l_thigh_yaw
+    child_link: l_thigh_pitch
+    joint_limits: [-1.75, 0.7]
+
+  - joint_name: l_knee_pitch
+    parent_link: l_thigh_pitch
+    child_link: l_shank_pitch
+    joint_limits: [-0.09, 1.92]
+
+  - joint_name: l_ankle_pitch
+    parent_link: l_shank_pitch
+    child_link: l_foot_pitch
+    joint_limits: [-1.05, 0.52]
+
+  - joint_name: l_ankle_roll
+    parent_link: l_foot_pitch
+    child_link: l_foot_roll
+    joint_limits: [-0.44, 0.44]
+
+  # Right leg:
+  - joint_name: r_hip_roll
+    parent_link: base
+    child_link: r_thigh_roll
+    joint_limits: [-0.79, 0.09]
+
+  - joint_name: r_hip_yaw
+    parent_link: r_thigh_roll
+    child_link: r_thigh_yaw
+    joint_limits: [-0.7, 0.7]
+
+  - joint_name: r_hip_pitch
+    parent_link: r_thigh_yaw
+    child_link: r_thigh_pitch
+    joint_limits: [-1.75, 0.7]
+
+  - joint_name: r_knee_pitch
+    parent_link: r_thigh_pitch
+    child_link: r_shank_pitch
+    joint_limits: [-0.09, 1.92]
+
+  - joint_name: r_ankle_pitch
+    parent_link: r_shank_pitch
+    child_link: r_foot_pitch
+    joint_limits: [-1.05, 0.52]
+
+  - joint_name: r_ankle_roll
+    parent_link: r_foot_pitch
+    child_link: r_foot_roll
+    joint_limits: [-0.44, 0.44]

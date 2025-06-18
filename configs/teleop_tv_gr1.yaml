@@ -1,0 +1,148 @@
+GR1_body:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/urdf/gr1_dex.urdf
+  fixed_joints: ["joint_waist_yaw", "joint_waist_pitch", "joint_waist_roll"]
+
+  pre_processor:
+    _target_: retarget.pre_processer.AVPVuerGR1BodyPreProcessor
+    human_motion_amplifier: 1.0
+
+  pre_filters:
+    - cartesian_filter:
+      _target_: retarget.filter.CartesianFilter
+      target_links:
+        link_LArm7:
+          history_size: 10
+          smoothing_strength: 0.2
+          speed_limit: 0.02
+          rotation_limit: 0.8
+          x: [0.15, 0.5]
+          y: [0, 0.65]
+          z: [0, 0.6]
+        link_RArm7:
+          history_size: 10
+          smoothing_strength: 0.2
+          speed_limit: 0.02
+          rotation_limit: 0.8
+          x: [0.15, 0.5]
+          y: [0, 0.65]
+          z: [0, 0.6]
+        link_head_pitch:
+          history_size: 1
+          smoothing_strength: 0
+          speed_limit: 0.01
+          rotation_limit: 0.2
+          x: [0, 0.3]
+          y: [0, 0.3]
+          z: [0.55, 0.65]
+
+    - angle_filter:
+      _target_: retarget.filter.AngleLimiter
+      target_links:
+        link_head_pitch:
+          x: [0, 20]
+          y: [0, 20]
+          z: [0, 70]
+
+  solver:
+    _target_: retarget.solver.IKSolver
+    dt: 0.01
+    num_step_per_frame: 1
+    # tasks and costs
+    posture_cost: 0.01
+    link_costs:
+      link_LArm7:
+        orientation_cost: 0.5
+        position_cost: 1.0
+      link_RArm7:
+        orientation_cost: 0.5
+        position_cost: 1.0
+      link_head_pitch:
+        orientation_cost: 1.0
+        position_cost: 0.0
+
+  post_filters:
+    - joint_position_filter:
+      _target_: retarget.filter.JointPositionFilter
+      history_size: 10
+      smoothing_strength: 0.2
+      outlier_threshold: 0.8
+      speed_limit: 0.2
+      verbose: False
+      joint_mask_names:
+        - joint_LFinger0
+        - joint_LFinger1
+        - joint_LFinger2
+        - joint_LFinger3
+        - joint_LFinger11
+        - joint_LFinger12
+        - joint_LFinger14
+        - joint_LFinger15
+        - joint_LFinger5
+        - joint_LFinger6
+        - joint_LFinger8
+        - joint_LFinger9
+        - joint_RFinger0
+        - joint_RFinger1
+        - joint_RFinger2
+        - joint_RFinger3
+        - joint_RFinger11
+        - joint_RFinger12
+        - joint_RFinger14
+        - joint_RFinger15
+        - joint_RFinger5
+        - joint_RFinger6
+        - joint_RFinger8
+        - joint_RFinger9
+
+GR1_left_hand:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/handleft01151/urdf/handleft01151_renamed.urdf
+
+  pre_processor:
+    _target_: retarget.pre_processer.AVPVuerGR1HandAnglePreProcessor
+    side: left
+
+  solver:
+    _target_: retarget.solver.AVPAngleSolver
+    x_plane_idx: [0, 5, 6, 10, 11, 15, 16, 20, 21]
+    z_plane_idx: [[5, 6], [10, 11], [15, 16], [20, 21]]
+    thumb_idx: [1, 4]
+
+  post_filters:
+    - angle_discretizer:
+      _target_: retarget.filter.GR1AngleDiscretizer
+      num_bins: 3
+      real_robot: True
+
+GR1_right_hand:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/handright01091/urdf/handright01091_renamed.urdf
+
+  pre_processor:
+    _target_: retarget.pre_processer.AVPVuerGR1HandAnglePreProcessor
+    side: right
+
+  solver:
+    _target_: retarget.solver.AVPAngleSolver
+    x_plane_idx: [0, 5, 6, 10, 11, 15, 16, 20, 21]
+    z_plane_idx: [[5, 6], [10, 11], [15, 16], [20, 21]]
+    thumb_idx: [1, 4]
+
+  post_filters:
+    - angle_discretizer:
+      _target_: retarget.filter.GR1AngleDiscretizer
+      num_bins: 3
+      real_robot: True

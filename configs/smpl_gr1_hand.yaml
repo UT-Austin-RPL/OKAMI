@@ -1,0 +1,89 @@
+GR1_left_hand:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/handleft01151/urdf/handleft01151_renamed.urdf
+
+  pre_processor:
+    _target_: retarget.pre_processer.smpl_gr1.SMPLGR1HandHybridPreProcessor
+    side: left
+
+  solver:
+    _target_: retarget.solver.SMPLHybridSolver
+    # for IK solver
+    dt: 0.01
+    num_step_per_frame: 20
+    amplify_factor: 50.0
+    posture_cost: 0.0
+    link_costs:
+      link_LArm10:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_LArm14:
+        orientation_cost: 0.0
+        position_cost: [1.0, 0.0, 1.0]
+      link_LArm17:
+        orientation_cost: 0.0
+        position_cost: [1.0, 0.0, 1.0]
+      link_LArm20:
+        orientation_cost: 0.0
+        position_cost: [1.0, 0.0, 1.0]
+      link_LArm23:
+        orientation_cost: 0.0
+        position_cost: [1.0, 0.0, 1.0]
+    # for angle solver
+    x_plane_idx: [0, 1, 4, 7, 10]
+    z_plane_idx: [[0, 2], [3, 5], [9, 11], [6, 8]]
+    thumb_idx: [12, 14]
+
+  post_filters:
+    - angle_discretizer:
+      _target_: retarget.filter.GR1AngleDiscretizer
+      num_bins: 3
+
+GR1_right_hand:
+  _target_: retarget.robot.Robot
+  auto_clip: True
+  robot_description:
+    REPOSITORY_PATH: assets
+    PACKAGE_PATH: assets/gr1
+    URDF_PATH: assets/gr1/handright01091/urdf/handright01091_renamed.urdf
+
+  pre_processor:
+    _target_: retarget.pre_processer.smpl_gr1.SMPLGR1HandHybridPreProcessor
+    side: right
+
+  solver:
+    _target_: retarget.solver.SMPLHybridSolver
+    # for IK solver
+    dt: 0.01
+    num_step_per_frame: 20
+    amplify_factor: 50.0
+    posture_cost: 0.0
+    link_costs:
+      link_RArm10:
+        orientation_cost: 0.0
+        position_cost: 1.0
+      link_RArm14:
+        orientation_cost: 0.0
+        position_cost: [1.0, 0.0, 1.0]
+      link_RArm17:
+        orientation_cost: 0.0
+        position_cost: [1.0, 0.0, 1.0]
+      link_RArm20:
+        orientation_cost: 0.0
+        position_cost: [1.0, 0.0, 1.0]
+      link_RArm23:
+        orientation_cost: 0.0
+        position_cost: [1.0, 0.0, 1.0]
+    # for angle solver
+    x_plane_idx: [0, 1, 4, 7, 10]
+    z_plane_idx: [[0, 2], [3, 5], [9, 11], [6, 8]]
+    thumb_idx: [12, 14]
+
+  post_filters:
+    - angle_discretizer:
+      _target_: retarget.filter.GR1AngleDiscretizer
+      num_bins: 3
