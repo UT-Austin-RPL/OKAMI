@@ -1,0 +1,168 @@
+{
+    'right': 
+    {
+        'type': 'JOINT_POSITION', 
+        'input_max': 1, 
+        'input_min': -1, 
+        'output_max': 0.05, 
+        'output_min': -0.05, 
+        'kp': 50, 
+        'damping_ratio': 1, 
+        'impedance_mode': 'fixed', 
+        'kp_limits': [0, 300], 
+        'damping_ratio_limits': [0, 10], 
+        'qpos_limits': None, 
+        'interpolation': None, 
+        'ramp_ratio': 0.2, 
+        'robot_name': 'GR1FloatingBody', 
+        'sim': <robosuite.utils.binding_utils.MjSim object at 0x7f267c13b7c0>, 
+        'ref_name': 'gripper0_right_grip_site', 
+        'part_name': 'right', 
+        'naming_prefix': 'robot0_', 
+        'eef_rot_offset': array([ 0.        ,  0.70700026,  0.        , -0.70700026], dtype=float32), 
+        'ndim': 7, 
+        'policy_freq': 20, 
+        'lite_physics': False, 
+        'joint_indexes': 
+        {
+            'joints': [9, 10, 11, 12, 13, 14, 15], 
+            'qpos': [9, 10, 11, 12, 13, 14, 15], 
+            'qvel': [9, 10, 11, 12, 13, 14, 15]
+        }, 
+        'actuator_range': (array([-20000., -20000., -20000., -20000., -20000., -20000., -20000.]), array([20000., 20000., 20000., 20000., 20000., 20000., 20000.])), 
+        'load_urdf': True
+    }, 
+    'left': 
+    {
+        'type': 'JOINT_POSITION', 
+        'input_max': 1, 
+        'input_min': -1, 
+        'output_max': 0.05, 
+        'output_min': -0.05, 
+        'kp': 50, 
+        'damping_ratio': 1, 
+        'impedance_mode': 'fixed', 
+        'kp_limits': [0, 300], 
+        'damping_ratio_limits': [0, 10], 
+        'qpos_limits': None, 
+        'interpolation': None, 
+        'ramp_ratio': 0.2, 
+        'robot_name': 'GR1FloatingBody', 
+        'sim': <robosuite.utils.binding_utils.MjSim object at 0x7f267c13b7c0>, 
+        'ref_name': 'gripper0_left_grip_site', 
+        'part_name': 'left', 
+        'naming_prefix': 'robot0_', 
+        'eef_rot_offset': array([0.70700026, 0.        , 0.70700026, 0.        ], dtype=float32), 
+        'ndim': 7, 
+        'policy_freq': 20, 
+        'lite_physics': False, 
+        'joint_indexes': 
+        {
+            'joints': [28, 29, 30, 31, 32, 33, 34], 
+            'qpos': [28, 29, 30, 31, 32, 33, 34], 
+            'qvel': [28, 29, 30, 31, 32, 33, 34]
+        }, 
+        'actuator_range': (array([-20000., -20000., -20000., -20000., -20000., -20000., -20000.]), 
+                            array([20000., 20000., 20000., 20000., 20000., 20000., 20000.])), 
+        'load_urdf': False
+    }, 
+    'right_gripper': 
+    {
+        'type': 'JOINT_POSITION', 
+        'robot_name': 'GR1FloatingBody', 
+        'sim': <robosuite.utils.binding_utils.MjSim object at 0x7f267c13b7c0>, 
+        'eef_name': 'gripper0_right_grip_site', 
+        'part_name': 'right_gripper', 
+        'naming_prefix': 'robot0_', 
+        'ndim': 6, 
+        'policy_freq': 20, 
+        'joint_indexes': 
+        {
+            'joints': ['gripper0_right_joint_r_thumb_proximal_1', 'gripper0_right_joint_r_thumb_proximal_2', 'gripper0_right_joint_r_thumb_middle', 'gripper0_right_joint_r_thumb_distal', 'gripper0_right_joint_r_index_proximal', 'gripper0_right_joint_r_index_distal', 'gripper0_right_joint_r_middle_proximal', 'gripper0_right_joint_r_middle_distal', 'gripper0_right_joint_r_ring_proximal', 'gripper0_right_joint_r_ring_distal', 'gripper0_right_joint_r_pinky_proximal', 'gripper0_right_joint_r_pinky_distal'], 
+            'actuators': [23, 24, 25, 26, 27, 28], 
+            'qpos': [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27], 
+            'qvel': [16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27]
+        }, 
+        'actuator_range': (array([-1., -1., -1., -1., -1., -1.]), array([1., 1., 1., 1., 1., 1.]))
+    }, 
+    'left_gripper': 
+    {
+        'type': 'JOINT_POSITION', 
+        'robot_name': 'GR1FloatingBody', 
+        'sim': <robosuite.utils.binding_utils.MjSim object at 0x7f267c13b7c0>, 
+        'eef_name': 'gripper0_left_grip_site', 
+        'part_name': 'left_gripper', 
+        'naming_prefix': 'robot0_', 
+        'ndim': 6, 
+        'policy_freq': 20, 
+        'joint_indexes': 
+        {
+            'joints': ['gripper0_left_joint_l_thumb_proximal_1', 'gripper0_left_joint_l_thumb_proximal_2', 'gripper0_left_joint_l_thumb_middle', 'gripper0_left_joint_l_thumb_distal', 'gripper0_left_joint_l_index_proximal', 'gripper0_left_joint_l_index_distal', 'gripper0_left_joint_l_middle_proximal', 'gripper0_left_joint_l_middle_distal', 'gripper0_left_joint_l_ring_proximal', 'gripper0_left_joint_l_ring_distal', 'gripper0_left_joint_l_pinky_proximal', 'gripper0_left_joint_l_pinky_distal'], 
+            'actuators': [29, 30, 31, 32, 33, 34], 
+            'qpos': [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46], 
+            'qvel': [35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46]
+        }, 
+        'actuator_range': (array([-1., -1., -1., -1., -1., -1.]), array([1., 1., 1., 1., 1., 1.]))
+    }, 
+    'base': 
+    {
+        'type': 'JOINT_VELOCITY', 
+        'interpolation': None, 
+        'ramp_ratio': 1.0, 
+        'robot_name': 'GR1FloatingBody', 
+        'sim': <robosuite.utils.binding_utils.MjSim object at 0x7f267c13b7c0>, 
+        'part_name': 'base', 
+        'naming_prefix': 'base0_', 
+        'ndim': 7, 
+        'policy_freq': 20, 
+        'lite_physics': False, 
+        'joint_indexes': {
+            'joints': [0, 1, 2], 
+            'qpos': [0, 1, 2], 
+            'qvel': [0, 1, 2]
+        }, 
+        'actuator_range': (array([-1., -1., -4.]), array([1., 1., 4.]))
+    }, 
+    'head': 
+    {
+        'type': 'JOINT_POSITION', 
+        'interpolation': None, 
+        'ramp_ratio': 1.0, 
+        'robot_name': 'GR1FloatingBody', 
+        'sim': <robosuite.utils.binding_utils.MjSim object at 0x7f267c13b7c0>, 
+        'kp': 10, 
+        'output_max': 1.0, 
+        'output_min': -1.0, 
+        'part_name': 'head', 
+        'naming_prefix': 'robot0_', 
+        'ndim': 7, 
+        'policy_freq': 20, 
+        'joint_indexes': 
+        {
+            'joints': [6, 7, 8], 
+            'qpos': [6, 7, 8], 
+            'qvel': [6, 7, 8]
+        }, 
+        'actuator_range': (array([-20000., -20000., -20000.]), array([20000., 20000., 20000.]))
+    }, 
+    'torso': 
+    {
+        'type': 'JOINT_POSITION', 
+        'interpolation': None, 
+        'ramp_ratio': 1.0, 
+        'robot_name': 'GR1FloatingBody', 
+        'sim': <robosuite.utils.binding_utils.MjSim object at 0x7f267c13b7c0>, 
+        'kp': 2000, 
+        'part_name': 'torso', 
+        'naming_prefix': 'robot0_', 
+        'ndim': 7, 
+        'policy_freq': 20, 
+        'lite_physics': False, 
+        'joint_indexes': {
+            'joints': [3, 4, 5], 
+            'qpos': [3, 4, 5], 
+            'qvel': [3, 4, 5]
+        }, 
+        'actuator_range': (array([-20000., -20000., -20000.]), array([20000., 20000., 20000.]))
+    }
+}

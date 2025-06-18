@@ -1,0 +1,6 @@
+[submodule "third-party/DROID-SLAM"]
+	path = third-party/DROID-SLAM
+	url = https://github.com/princeton-vl/DROID-SLAM
+[submodule "third-party/ViTPose"]
+	path = third-party/ViTPose
+	url = https://github.com/ViTAE-Transformer/ViTPose
